@@ -35,7 +35,18 @@ export const categories = [
   },
 ];
 
-const Directory = ({ categories }) => {
+export type DirectoryCategory = {
+  id: number;
+  title: string;
+  imageUrl: string;
+  route: string;
+};
+
+type DirectoryProps = {
+  categories: DirectoryCategory[];
+};
+
+const Directory = ({ categories }: DirectoryProps) => {
   return (
     <DirectoryContainer>
       {categories.map((category) => (
